@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rudrakalshethra - Bharatanatyam Dance School</title>
+    <title>Rudrakalshethra - Dance School Management</title>
     <style>
-        /* CSS styles remain the same as the file you uploaded */
         * {
             margin: 0;
             padding: 0;
@@ -41,134 +40,10 @@
             font-weight: bold;
         }
 
-        .logo-icon {
-            font-size: 40px;
-        }
-
-        .nav-menu {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
-
-        .nav-menu li {
-            cursor: pointer;
-            padding: 10px 15px;
-            border-radius: 8px;
-            transition: background 0.3s;
-        }
-
-        .nav-menu li:hover, .nav-menu li.active {
-            background: rgba(255,255,255,0.2);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-
-        .hero-section {
-            background: linear-gradient(135deg, #ff6f00 0%, #ff8f00 100%);
-            color: white;
-            padding: 50px;
-            border-radius: 20px;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .hero-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .hero-text h1 {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
-
-        .hero-text p {
-            font-size: 20px;
-            opacity: 0.9;
-        }
-
-        .hero-icon {
-            font-size: 120px;
-            opacity: 0.3;
-        }
-
-        .section-title {
-            font-size: 32px;
-            margin-bottom: 30px;
-            color: #d84315;
-            font-weight: bold;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
-        }
-
-        .card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-        }
-
-        .card-image {
-            width: 100%;
-            height: 200px;
-            background: #ddd;
+        .user-info {
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 60px;
-            color: #999;
-        }
-
-        .card-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .card-content {
-            padding: 20px;
-        }
-
-        .card-category {
-            display: inline-block;
-            background: #ffccbc;
-            color: #d84315;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .card-title {
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .card-description {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 15px;
+            gap: 15px;
         }
 
         .btn {
@@ -181,59 +56,182 @@
             font-size: 16px;
             font-weight: bold;
             transition: transform 0.2s;
-            display: inline-block;
         }
 
         .btn:hover {
             transform: scale(1.05);
         }
 
-        .quick-access {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-
-        .quick-access-card {
+        .btn-secondary {
             background: white;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            color: #d84315;
         }
 
-        .quick-access-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
         }
 
-        .quick-access-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 15px;
-            background: #ffccbc;
-            border-radius: 50%;
+        .login-container {
             display: flex;
-            align-items: center;
             justify-content: center;
-            font-size: 40px;
+            align-items: center;
+            min-height: 80vh;
         }
 
-        .quick-access-title {
-            font-size: 18px;
+        .login-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .login-card h2 {
+            text-align: center;
+            color: #d84315;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
             font-weight: bold;
             color: #333;
         }
 
-        .page {
-            display: none;
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
         }
 
-        .page.active {
-            display: block;
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #ff6f00;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .stat-card .icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .stat-card .value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #d84315;
+            margin-bottom: 5px;
+        }
+
+        .stat-card .label {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .nav-tab {
+            padding: 12px 25px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: #666;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .nav-tab.active {
+            color: #d84315;
+            border-bottom-color: #d84315;
+            font-weight: bold;
+        }
+
+        .table-container {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th,
+        table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        table th {
+            background: #f5f5f5;
+            font-weight: bold;
+            color: #333;
+        }
+
+        table tr:hover {
+            background: #fff5f0;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .badge-success {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .badge-warning {
+            background: #fff3e0;
+            color: #e65100;
+        }
+
+        .badge-danger {
+            background: #ffebee;
+            color: #c62828;
         }
 
         .modal {
@@ -257,16 +255,14 @@
             background: white;
             padding: 40px;
             border-radius: 20px;
-            max-width: 800px;
+            max-width: 600px;
+            width: 90%;
             max-height: 90vh;
             overflow-y: auto;
-            position: relative;
         }
 
         .modal-close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
+            float: right;
             font-size: 30px;
             cursor: pointer;
             color: #999;
@@ -276,297 +272,454 @@
             color: #333;
         }
 
-        .class-card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
             margin-bottom: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        .class-status {
-            display: inline-block;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-bottom: 15px;
+        .hidden {
+            display: none !important;
         }
 
-        .status-upcoming {
-            background: #e3f2fd;
-            color: #1976d2;
-        }
-
-        .status-ongoing {
-            background: #e8f5e9;
-            color: #388e3c;
-        }
-
-        .status-completed { /* Added status for completeness */
-             background: #fbecec;
-             color: #d32f2f;
-        }
-
-
-        .class-info {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin: 15px 0;
-        }
-
-        .info-row {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #666;
-        }
-
-        .theory-list {
-            list-style: none;
-        }
-
-        .theory-item {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 15px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            cursor: pointer;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
         }
 
-        .theory-item:hover {
-            transform: translateX(10px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-        }
-
-        .theory-icon {
-            width: 60px;
-            height: 60px;
-            background: #ffccbc;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-        }
-
-        .theory-content {
-            flex: 1;
-        }
-
-        .theory-title {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .theory-desc {
-            color: #666;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: #ff6f00;
-        }
-
-        .fab {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #d84315 0%, #f57c00 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 30px;
-            cursor: pointer;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s;
         }
 
-        .fab:hover {
-            transform: scale(1.1);
+        .card:hover {
+            transform: translateY(-5px);
         }
 
-        @media (max-width: 768px) {
-            .nav-menu {
-                gap: 10px;
-            }
+        .alert {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
 
-            .hero-text h1 {
-                font-size: 32px;
-            }
+        .alert-success {
+            background: #e8f5e9;
+            color: #2e7d32;
+            border-left: 4px solid #2e7d32;
+        }
 
-            .hero-icon {
-                display: none;
-            }
-
-            .grid {
-                grid-template-columns: 1fr;
-            }
+        .alert-error {
+            background: #ffebee;
+            color: #c62828;
+            border-left: 4px solid #c62828;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="header-content">
-            <div class="logo">
-                <span class="logo-icon">🎭</span>
-                <span>Rudrakalshethra</span>
+    <!-- Login Page -->
+    <div id="loginPage">
+        <div class="login-container">
+            <div class="login-card">
+                <h2>🎭 Rudrakalshethra</h2>
+                <p style="text-align: center; color: #666; margin-bottom: 30px;">Dance School Management</p>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Login</button>
+                </form>
+                <div id="loginError" class="alert alert-error hidden" style="margin-top: 20px;"></div>
             </div>
-            <ul class="nav-menu">
-                <li class="active" onclick="showPage('home')">Home</li>
-                <li onclick="showPage('mudras')">Mudras</li>
-                <li onclick="showPage('theory')">Theory</li>
-                <li onclick="showPage('classes')">Classes</li>
-            </ul>
         </div>
     </div>
 
-    <div class="container">
-        <div id="home" class="page active">
-            <div class="hero-section">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1>Welcome to Rudrakalshethra</h1>
-                        <p>Master the ancient art of Bharatanatyam</p>
-                    </div>
-                    <div class="hero-icon">🕉️</div>
+    <!-- Admin Dashboard -->
+    <div id="adminDashboard" class="hidden">
+        <div class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span>🎭</span>
+                    <span>Rudrakalshethra</span>
                 </div>
-            </div>
-
-            <h2 class="section-title">Quick Access</h2>
-            <div class="quick-access">
-                <div class="quick-access-card" onclick="showPage('mudras')">
-                    <div class="quick-access-icon">🤚</div>
-                    <div class="quick-access-title">Mudras</div>
-                </div>
-                <div class="quick-access-card" onclick="showPage('theory')">
-                    <div class="quick-access-icon">📖</div>
-                    <div class="quick-access-title">Theory</div>
-                </div>
-                <div class="quick-access-card" onclick="showPage('classes')">
-                    <div class="quick-access-icon">🎥</div>
-                    <div class="quick-access-title">Online Classes</div>
-                </div>
-                <div class="quick-access-card">
-                    <div class="quick-access-icon">▶️</div>
-                    <div class="quick-access-title">Practice</div>
+                <div class="user-info">
+                    <span id="userName"></span>
+                    <button class="btn btn-secondary" onclick="logout()">Logout</button>
                 </div>
             </div>
         </div>
 
-        <div id="mudras" class="page">
-            <h2 class="section-title">Mudra Tutorials</h2>
-            <div id="mudraGrid" class="grid"></div>
-        </div>
+        <div class="container">
+            <div class="nav-tabs">
+                <button class="nav-tab active" onclick="showAdminTab('dashboard')">Dashboard</button>
+                <button class="nav-tab" onclick="showAdminTab('students')">Students</button>
+                <button class="nav-tab" onclick="showAdminTab('attendance')">Attendance</button>
+                <button class="nav-tab" onclick="showAdminTab('payments')">Payments</button>
+                <button class="nav-tab" onclick="showAdminTab('content')">Content</button>
+            </div>
 
-        <div id="theory" class="page">
-            <h2 class="section-title">Theory & Concepts</h2>
-            <ul class="theory-list">
-                <li class="theory-item" onclick="showTheoryDetail('Introduction to Bharatanatyam')">
-                    <div class="theory-icon">📜</div>
-                    <div class="theory-content">
-                        <div class="theory-title">Introduction to Bharatanatyam</div>
-                        <div class="theory-desc">Learn about the origin and history of Bharatanatyam</div>
-                    </div>
-                    <span>→</span>
-                </li>
-                <li class="theory-item" onclick="showTheoryDetail('Asamyukta Hastas')">
-                    <div class="theory-icon">🤚</div>
-                    <div class="theory-content">
-                        <div class="theory-title">Asamyukta Hastas</div>
-                        <div class="theory-desc">Single hand gestures - 28 fundamental mudras</div>
-                    </div>
-                    <span>→</span>
-                </li>
-                <li class="theory-item" onclick="showTheoryDetail('Samyukta Hastas')">
-                    <div class="theory-icon">👐</div>
-                    <div class="theory-content">
-                        <div class="theory-title">Samyukta Hastas</div>
-                        <div class="theory-desc">Double hand gestures - combined mudras</div>
-                    </div>
-                    <span>→</span>
-                </li>
-                <li class="theory-item" onclick="showTheoryDetail('Adavus')">
-                    <div class="theory-icon">👣</div>
-                    <div class="theory-content">
-                        <div class="theory-title">Adavus</div>
-                        <div class="theory-desc">Basic steps and movements in Bharatanatyam</div>
-                    </div>
-                    <span>→</span>
-                </li>
-                <li class="theory-item" onclick="showTheoryDetail('Nritta, Nritya, Natya')">
-                    <div class="theory-icon">🎭</div>
-                    <div class="theory-content">
-                        <div class="theory-title">Nritta, Nritya, Natya</div>
-                        <div class="theory-desc">Three aspects of classical dance</div>
-                    </div>
-                    <span>→</span>
-                </li>
-            </ul>
-        </div>
+            <!-- Dashboard Tab -->
+            <div id="dashboardTab" class="page active">
+                <div id="branchSelector" class="form-group" style="max-width: 300px; margin-bottom: 20px;">
+                    <label>Select Branch</label>
+                    <select id="branchSelect" onchange="loadDashboardStats()">
+                        <option value="all">All Branches</option>
+                        <option value="kothavara">Kothavara</option>
+                        <option value="ambikamarket">Ambikamarket</option>
+                        <option value="edayazham">Edayazham</option>
+                    </select>
+                </div>
 
-        <div id="classes" class="page">
-            <h2 class="section-title">Online Classes</h2>
-            <div id="classesContainer"></div>
+                <div class="dashboard-grid">
+                    <div class="stat-card">
+                        <div class="icon">👥</div>
+                        <div class="value" id="totalStudents">0</div>
+                        <div class="label">Total Students</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="icon">✅</div>
+                        <div class="value" id="activeStudents">0</div>
+                        <div class="label">Active Students</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="icon">⚠️</div>
+                        <div class="value" id="studentsPayable">0</div>
+                        <div class="label">Students Payable</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="icon">💰</div>
+                        <div class="value" id="totalPending">₹0</div>
+                        <div class="label">Pending Amount</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Recent Revenue (30 days)</h3>
+                    <div style="font-size: 36px; font-weight: bold; color: #2e7d32; margin-top: 15px;" id="recentRevenue">₹0</div>
+                </div>
+            </div>
+
+            <!-- Students Tab -->
+            <div id="studentsTab" class="page">
+                <div class="action-buttons">
+                    <button class="btn" onclick="openModal('addStudentModal')">+ Add Student</button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Branch</th>
+                                <th>Classes Attended</th>
+                                <th>Unpaid Classes</th>
+                                <th>Pending Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="studentsTableBody">
+                            <tr>
+                                <td colspan="7" style="text-align: center;">Loading...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Attendance Tab -->
+            <div id="attendanceTab" class="page">
+                <div class="action-buttons">
+                    <button class="btn" onclick="openModal('markAttendanceModal')">Mark Attendance</button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Student</th>
+                                <th>Branch</th>
+                                <th>Status</th>
+                                <th>Marked By</th>
+                            </tr>
+                        </thead>
+                        <tbody id="attendanceTableBody">
+                            <tr>
+                                <td colspan="5" style="text-align: center;">Loading...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Payments Tab -->
+            <div id="paymentsTab" class="page">
+                <div class="action-buttons">
+                    <button class="btn" onclick="openModal('recordPaymentModal')">Record Payment</button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Student</th>
+                                <th>Branch</th>
+                                <th>Classes</th>
+                                <th>Amount</th>
+                                <th>Method</th>
+                                <th>Received By</th>
+                            </tr>
+                        </thead>
+                        <tbody id="paymentsTableBody">
+                            <tr>
+                                <td colspan="7" style="text-align: center;">Loading...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Content Tab -->
+            <div id="contentTab" class="page">
+                <div class="nav-tabs">
+                    <button class="nav-tab active" onclick="showContentSubTab('mudras')">Mudras</button>
+                    <button class="nav-tab" onclick="showContentSubTab('theory')">Theory</button>
+                </div>
+
+                <!-- Mudras Content -->
+                <div id="mudrasContent" class="page active">
+                    <div class="action-buttons">
+                        <button class="btn" onclick="openModal('addMudraModal')">+ Add Mudra</button>
+                    </div>
+                    <div class="card-grid" id="mudrasGrid"></div>
+                </div>
+
+                <!-- Theory Content -->
+                <div id="theoryContent" class="page">
+                    <div class="action-buttons">
+                        <button class="btn" onclick="openModal('addTheoryModal')">+ Add Theory</button>
+                    </div>
+                    <div class="card-grid" id="theoryGrid"></div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div id="mudraModal" class="modal">
+    <!-- Student Dashboard -->
+    <div id="studentDashboard" class="hidden">
+        <div class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span>🎭</span>
+                    <span>Rudrakalshethra</span>
+                </div>
+                <div class="user-info">
+                    <span id="studentUserName"></span>
+                    <button class="btn btn-secondary" onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="nav-tabs">
+                <button class="nav-tab active" onclick="showStudentTab('dashboard')">Dashboard</button>
+                <button class="nav-tab" onclick="showStudentTab('content')">Learning Content</button>
+            </div>
+
+            <!-- Student Dashboard Tab -->
+            <div id="studentDashboardTab" class="page active">
+                <div class="dashboard-grid">
+                    <div class="stat-card">
+                        <div class="icon">📚</div>
+                        <div class="value" id="studentClassesAttended">0</div>
+                        <div class="label">Classes Attended</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="icon">⏳</div>
+                        <div class="value" id="studentUnpaidClasses">0</div>
+                        <div class="label">Unpaid Classes</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="icon">💰</div>
+                        <div class="value" id="studentPendingAmount">₹0</div>
+                        <div class="label">Pending Amount</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="icon">✅</div>
+                        <div class="value" id="studentTotalPaid">₹0</div>
+                        <div class="label">Total Paid</div>
+                    </div>
+                </div>
+
+                <div class="table-container" style="margin-bottom: 20px;">
+                    <h3>Recent Attendance</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="studentAttendanceBody"></tbody>
+                    </table>
+                </div>
+
+                <div class="table-container">
+                    <h3>Payment History</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Classes</th>
+                                <th>Amount</th>
+                                <th>Method</th>
+                            </tr>
+                        </thead>
+                        <tbody id="studentPaymentBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Student Content Tab -->
+            <div id="studentContentTab" class="page">
+                <div class="nav-tabs">
+                    <button class="nav-tab active" onclick="showStudentContentSubTab('mudras')">Mudras</button>
+                    <button class="nav-tab" onclick="showStudentContentSubTab('theory')">Theory</button>
+                </div>
+
+                <!-- Student Mudras Content -->
+                <div id="studentMudrasContent" class="page active">
+                    <div class="card-grid" id="studentMudrasGrid"></div>
+                </div>
+
+                <!-- Student Theory Content -->
+                <div id="studentTheoryContent" class="page">
+                    <div class="card-grid" id="studentTheoryGrid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Add Student Modal -->
+    <div id="addStudentModal" class="modal">
         <div class="modal-content">
-            <span class="modal-close" onclick="closeModal('mudraModal')">&times;</span>
-            <div id="mudraDetail"></div>
+            <span class="modal-close" onclick="closeModal('addStudentModal')">&times;</span>
+            <h2>Add New Student</h2>
+            <form id="addStudentForm">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="studentName" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="studentEmail" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="studentPassword" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel" id="studentPhone" required>
+                </div>
+                <div class="form-group">
+                    <label>Branch</label>
+                    <select id="studentBranch" required>
+                        <option value="">Select Branch</option>
+                        <option value="kothavara">Kothavara</option>
+                        <option value="ambikamarket">Ambikamarket</option>
+                        <option value="edayazham">Edayazham</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Fee Per Class (₹)</label>
+                    <input type="number" id="studentFee" value="400" required>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Add Student</button>
+            </form>
         </div>
     </div>
 
-    <div id="theoryModal" class="modal">
+    <!-- Mark Attendance Modal -->
+    <div id="markAttendanceModal" class="modal">
         <div class="modal-content">
-            <span class="modal-close" onclick="closeModal('theoryModal')">&times;</span>
-            <div id="theoryDetail"></div>
+            <span class="modal-close" onclick="closeModal('markAttendanceModal')">&times;</span>
+            <h2>Mark Attendance</h2>
+            <form id="markAttendanceForm">
+                <div class="form-group">
+                    <label>Student</label>
+                    <select id="attendanceStudent" required></select>
+                </div>
+                <div class="form-group">
+                    <label>Date</label>
+                    <input type="date" id="attendanceDate" required>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="attendancePresent" checked>
+                        Present
+                    </label>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Mark Attendance</button>
+            </form>
         </div>
     </div>
 
+    <!-- Record Payment Modal -->
+    <div id="recordPaymentModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('recordPaymentModal')">&times;</span>
+            <h2>Record Payment</h2>
+            <form id="recordPaymentForm">
+                <div class="form-group">
+                    <label>Student</label>
+                    <select id="paymentStudent" required onchange="updatePaymentAmount()"></select>
+                </div>
+                <div class="form-group">
+                    <label>Number of Classes</label>
+                    <input type="number" id="paymentClasses" min="1" value="4" required onchange="updatePaymentAmount()">
+                </div>
+                <div class="form-group">
+                    <label>Amount (₹)</label>
+                    <input type="number" id="paymentAmount" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Payment Method</label>
+                    <select id="paymentMethod">
+                        <option value="cash">Cash</option>
+                        <option value="online">Online</option>
+                        <option value="card">Card</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Record Payment</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add Mudra Modal -->
     <div id="addMudraModal" class="modal">
         <div class="modal-content">
             <span class="modal-close" onclick="closeModal('addMudraModal')">&times;</span>
-            <h2 style="margin-bottom: 25px;">Add New Mudra</h2>
+            <h2>Add New Mudra</h2>
             <form id="addMudraForm">
                 <div class="form-group">
-                    <label>Mudra Name</label>
+                    <label>Name</label>
                     <input type="text" id="mudraName" required>
                 </div>
                 <div class="form-group">
@@ -582,228 +735,784 @@
                     <textarea id="mudraDescription" rows="3" required></textarea>
                 </div>
                 <div class="form-group">
-                    <label>Usage (Meaning/Theory)</label>
-                    <textarea id="mudraUsage" rows="3" required></textarea>
+                    <label>Meaning/Usage</label>
+                    <textarea id="mudraMeaning" rows="3" required></textarea>
                 </div>
                 <div class="form-group">
                     <label>Image URL</label>
-                    <input type="url" id="mudraImageUrl" required>
+                    <input type="url" id="mudraImage" required>
                 </div>
-                <button type="submit" class="btn" style="width: 100%;">Save Mudra</button>
+                <button type="submit" class="btn" style="width: 100%;">Add Mudra</button>
             </form>
         </div>
     </div>
 
-    <div class="fab" onclick="openModal('addMudraModal')" title="Add New Mudra">+</div>
+    <!-- Add Theory Modal -->
+    <div id="addTheoryModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('addTheoryModal')">&times;</span>
+            <h2>Add New Theory</h2>
+            <form id="addTheoryForm">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" id="theoryTitle" required>
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <input type="text" id="theoryCategory" required>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="theoryDescription" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Content</label>
+                    <textarea id="theoryContent" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Icon (emoji)</label>
+                    <input type="text" id="theoryIcon" placeholder="📚" required>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Add Theory</button>
+            </form>
+        </div>
+    </div>
 
     <script>
-        // FIX: Corrected API URL to match the server's port (5000)
-        const API_URL = 'http://localhost:5000/api'; 
+        const API_URL = 'http://localhost:5000/api';
+        let currentUser = null;
+        let studentsData = [];
 
-        // Sample data (fallback if API not available)
-        const sampleMudras = [
-            {
-                _id: '1',
-                name: 'Pataka',
-                category: 'Asamyukta Hasta',
-                description: 'The palm is held flat with all fingers together and the thumb bent.',
-                image: 'https://via.placeholder.com/300x200?text=Pataka+Mudra',
-                meaning: 'Used to denote cloud, night, river, horse, cutting, wind, etc.'
-            },
-            {
-                _id: '2',
-                name: 'Tripataka',
-                category: 'Asamyukta Hasta',
-                description: 'Ring finger is bent while other fingers are extended.',
-                image: 'https://via.placeholder.com/300x200?text=Tripataka+Mudra',
-                meaning: 'Used to denote crown, tree, flame, lamp, etc.'
-            }
-        ];
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            checkAuth();
+            setupForms();
+        });
 
-        const sampleClasses = [
-            {
-                _id: '1',
-                title: 'Beginner Batch - Morning',
-                schedule: 'Mon, Wed, Fri - 7:00 AM',
-                duration: '1 hour',
-                instructor: 'Guru Priya',
-                meetLink: 'https://meet.google.com/xxx-xxxx-xxx',
-                status: 'upcoming'
-            },
-            {
-                _id: '2',
-                title: 'Intermediate Level - Evening',
-                schedule: 'Tue, Thu, Sat - 6:00 PM',
-                duration: '1.5 hours',
-                instructor: 'Guru Lakshmi',
-                meetLink: 'https://meet.google.com/yyy-yyyy-yyy',
-                status: 'ongoing'
-            }
-        ];
-
-        // Page navigation
-        function showPage(pageName) {
-            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
-            document.querySelectorAll('.nav-menu li').forEach(item => item.classList.remove('active'));
-            
-            document.getElementById(pageName).classList.add('active');
-            // Use currentTarget to ensure the 'li' element gets the active class
-            if(event && event.currentTarget) {
-                event.currentTarget.classList.add('active');
+        // Check authentication
+        function checkAuth() {
+            const token = localStorage.getItem('token');
+            if (token) {
+                currentUser = JSON.parse(localStorage.getItem('user'));
+                if (currentUser.role === 'student') {
+                    showStudentDashboard();
+                } else {
+                    showAdminDashboard();
+                }
             } else {
-                 document.querySelector(`.nav-menu li[onclick*="${pageName}"]`).classList.add('active');
+                showLoginPage();
             }
-
-
-            if (pageName === 'mudras') loadMudras();
-            if (pageName === 'classes') loadClasses();
         }
 
-        // Load mudras
-        async function loadMudras() {
+        // Show pages
+        function showLoginPage() {
+            document.getElementById('loginPage').classList.remove('hidden');
+            document.getElementById('adminDashboard').classList.add('hidden');
+            document.getElementById('studentDashboard').classList.add('hidden');
+        }
+
+        function showAdminDashboard() {
+            document.getElementById('loginPage').classList.add('hidden');
+            document.getElementById('adminDashboard').classList.remove('hidden');
+            document.getElementById('studentDashboard').classList.add('hidden');
+            document.getElementById('userName').textContent = `${currentUser.name} (${currentUser.role.toUpperCase()})`;
+            
+            if (currentUser.role === 'manager') {
+                document.getElementById('branchSelector').style.display = 'none';
+                document.getElementById('branchSelect').value = currentUser.branch;
+            }
+            
+            loadDashboardStats();
+        }
+
+        function showStudentDashboard() {
+            document.getElementById('loginPage').classList.add('hidden');
+            document.getElementById('adminDashboard').classList.add('hidden');
+            document.getElementById('studentDashboard').classList.remove('hidden');
+            document.getElementById('studentUserName').textContent = currentUser.name;
+            loadStudentData();
+        }
+
+        // Setup forms
+        function setupForms() {
+            document.getElementById('loginForm').addEventListener('submit', handleLogin);
+            document.getElementById('addStudentForm').addEventListener('submit', handleAddStudent);
+            document.getElementById('markAttendanceForm').addEventListener('submit', handleMarkAttendance);
+            document.getElementById('recordPaymentForm').addEventListener('submit', handleRecordPayment);
+            document.getElementById('addMudraForm').addEventListener('submit', handleAddMudra);
+            document.getElementById('addTheoryForm').addEventListener('submit', handleAddTheory);
+            
+            // Set today's date for attendance
+            document.getElementById('attendanceDate').valueAsDate = new Date();
+        }
+
+        // Login
+        async function handleLogin(e) {
+            e.preventDefault();
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+
             try {
-                const response = await fetch(`${API_URL}/mudras`);
-                // Use .ok to check HTTP status, fall back to sample data on failure
-                const mudras = response.ok ? await response.json() : sampleMudras;
-                displayMudras(mudras);
+                const response = await fetch(`${API_URL}/auth/login`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password })
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    localStorage.setItem('token', data.token);
+                    localStorage.setItem('user', JSON.stringify(data.user));
+                    currentUser = data.user;
+                    
+                    if (currentUser.role === 'student') {
+                        showStudentDashboard();
+                    } else {
+                        showAdminDashboard();
+                    }
+                } else {
+                    showError('loginError', 'Invalid credentials');
+                }
             } catch (error) {
-                console.error('API connection failed, showing sample data:', error);
-                displayMudras(sampleMudras);
+                showError('loginError', 'Connection error');
             }
         }
 
-        function displayMudras(mudras) {
-            const grid = document.getElementById('mudraGrid');
-            grid.innerHTML = mudras.map(mudra => `
-                <div class="card" onclick="showMudraDetail('${mudra._id}')">
-                    <div class="card-image">
-                        <img src="${mudra.image}" alt="${mudra.name}" onerror="this.parentElement.innerHTML='🤚'">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-category">${mudra.category}</span>
-                        <div class="card-title">${mudra.name}</div>
-                        <div class="card-description">${mudra.description}</div>
-                    </div>
-                </div>
-            `).join('');
+        // Logout
+        function logout() {
+            localStorage.clear();
+            currentUser = null;
+            showLoginPage();
         }
 
-        // Show mudra detail
-        async function showMudraDetail(id) {
-            let mudra;
-            try {
-                const response = await fetch(`${API_URL}/mudras/${id}`);
-                mudra = response.ok ? await response.json() : sampleMudras.find(m => m._id === id);
-                
-                document.getElementById('mudraDetail').innerHTML = `
-                    <img src="${mudra.image}" style="width: 100%; border-radius: 12px; margin-bottom: 20px;" onerror="this.style.display='none'">
-                    <h2 style="margin-bottom: 15px;">${mudra.name}</h2>
-                    <span class="card-category">${mudra.category}</span>
-                    <h3 style="margin-top: 20px; margin-bottom: 10px;">Description</h3>
-                    <p style="line-height: 1.6; color: #666;">${mudra.description}</p>
-                    <h3 style="margin-top: 20px; margin-bottom: 10px;">Usage/Meaning</h3>
-                    <p style="line-height: 1.6; color: #666;">${mudra.meaning}</p>
-                    <button class="btn" style="margin-top: 25px; width: 100%;">▶️ Watch Tutorial Video</button>
-                `;
-                openModal('mudraModal');
-            } catch (error) {
-                console.error('Error loading mudra:', error);
+        // Tab navigation
+        function showAdminTab(tab) {
+            document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            
+            event.target.classList.add('active');
+            document.getElementById(`${tab}Tab`).classList.add('active');
+
+            if (tab === 'students') loadStudents();
+            if (tab === 'attendance') loadAttendance();
+            if (tab === 'payments') loadPayments();
+            if (tab === 'content') loadMudras();
+        }
+
+        function showContentSubTab(tab) {
+            const tabs = document.querySelectorAll('#contentTab .nav-tab');
+            tabs.forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+
+            document.getElementById('mudrasContent').classList.remove('active');
+            document.getElementById('theoryContent').classList.remove('active');
+            
+            if (tab === 'mudras') {
+                document.getElementById('mudrasContent').classList.add('active');
+                loadMudras();
+            } else {
+                document.getElementById('theoryContent').classList.add('active');
+                loadTheory();
             }
         }
 
-        // Load classes
-        async function loadClasses() {
-            try {
-                // The backend doesn't have a /api/classes route, so we use sample data for now.
-                // If you add a /api/classes route, uncomment the API fetch below.
-                /*
-                const response = await fetch(`${API_URL}/classes`);
-                const classes = response.ok ? await response.json() : sampleClasses;
-                displayClasses(classes);
-                */
-                displayClasses(sampleClasses);
-
-            } catch (error) {
-                displayClasses(sampleClasses);
+        // Student tab navigation
+        function showStudentTab(tab) {
+            document.querySelectorAll('#studentDashboard .nav-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('#studentDashboard .page').forEach(p => p.classList.remove('active'));
+            
+            event.target.classList.add('active');
+            
+            if (tab === 'dashboard') {
+                document.getElementById('studentDashboardTab').classList.add('active');
+                loadStudentData();
+            } else {
+                document.getElementById('studentContentTab').classList.add('active');
+                loadStudentMudras();
             }
         }
 
-        function displayClasses(classes) {
-            const container = document.getElementById('classesContainer');
-            container.innerHTML = classes.map(cls => `
-                <div class="class-card">
-                    <span class="class-status status-${cls.status}">${cls.status.toUpperCase()}</span>
-                    <div class="card-title">${cls.title}</div>
-                    <div class="class-info">
-                        <div class="info-row">⏰ ${cls.schedule}</div>
-                        <div class="info-row">⏱️ ${cls.duration}</div>
-                        <div class="info-row">👤 ${cls.instructor}</div>
-                    </div>
-                    <button class="btn" style="width: 100%;" onclick="window.open('${cls.meetLink}', '_blank')">🎥 Join Class</button>
-                </div>
-            `).join('');
-        }
+        function showStudentContentSubTab(tab) {
+            const tabs = document.querySelectorAll('#studentContentTab .nav-tab');
+            tabs.forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
 
-        // Theory detail (Currently static content)
-        function showTheoryDetail(title) {
-            document.getElementById('theoryDetail').innerHTML = `
-                <h2 style="margin-bottom: 20px;">${title}</h2>
-                <p style="line-height: 1.8; color: #666;">
-                    This is where detailed theory content for "${title}" will be displayed.
-                </p>
-                <div style="background: #fff3e0; padding: 15px; border-radius: 10px; margin-top: 20px; border-left: 4px solid #ff6f00;">
-                    <strong>Note:</strong> You can add an API route like /api/theory/:title to dynamically fetch content from your MongoDB.
-                </div>
-            `;
-            openModal('theoryModal');
+            document.getElementById('studentMudrasContent').classList.remove('active');
+            document.getElementById('studentTheoryContent').classList.remove('active');
+            
+            if (tab === 'mudras') {
+                document.getElementById('studentMudrasContent').classList.add('active');
+                loadStudentMudras();
+            } else {
+                document.getElementById('studentTheoryContent').classList.add('active');
+                loadStudentTheory();
+            }
         }
 
         // Modal functions
         function openModal(modalId) {
             document.getElementById(modalId).classList.add('active');
+            if (modalId === 'markAttendanceModal') loadStudentDropdown('attendanceStudent');
+            if (modalId === 'recordPaymentModal') loadStudentDropdown('paymentStudent');
         }
 
         function closeModal(modalId) {
             document.getElementById(modalId).classList.remove('active');
         }
 
-        // Add mudra form submission
-        document.getElementById('addMudraForm').addEventListener('submit', async (e) => {
+        // Error display
+        function showError(elementId, message) {
+            const element = document.getElementById(elementId);
+            element.textContent = message;
+            element.classList.remove('hidden');
+            setTimeout(() => element.classList.add('hidden'), 5000);
+        }
+
+        // Load dashboard statistics
+        async function loadDashboardStats() {
+            const branch = document.getElementById('branchSelect').value;
+            
+            try {
+                const token = localStorage.getItem('token');
+                const response = await fetch(`${API_URL}/dashboard/stats?branch=${branch}`, {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                
+                if (response.ok) {
+                    const stats = await response.json();
+                    document.getElementById('totalStudents').textContent = stats.totalStudents;
+                    document.getElementById('activeStudents').textContent = stats.activeStudents;
+                    document.getElementById('studentsPayable').textContent = stats.studentsPayable;
+                    document.getElementById('totalPending').textContent = `₹${stats.totalPending}`;
+                    document.getElementById('recentRevenue').textContent = `₹${stats.recentRevenue}`;
+                }
+            } catch (error) {
+                console.error('Error loading dashboard stats:', error);
+            }
+        }
+
+        // Load students
+        async function loadStudents() {
+            try {
+                const token = localStorage.getItem('token');
+                const response = await fetch(`${API_URL}/students`, {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                
+                if (response.ok) {
+                    const students = await response.json();
+                    studentsData = students;
+                    renderStudentsTable(students);
+                }
+            } catch (error) {
+                console.error('Error loading students:', error);
+            }
+        }
+
+        function renderStudentsTable(students) {
+            const tbody = document.getElementById('studentsTableBody');
+            tbody.innerHTML = '';
+            
+            students.forEach(student => {
+                const user = student.userId;
+                const status = student.unpaidClasses >= 4 ? 'Pending Payment' : 'Active';
+                const statusClass = student.unpaidClasses >= 4 ? 'badge-warning' : 'badge-success';
+                
+                const row = `
+                    <tr>
+                        <td>${user.name}</td>
+                        <td>${user.email}</td>
+                        <td>${student.branch}</td>
+                        <td>${student.totalClassesAttended}</td>
+                        <td>${student.unpaidClasses}</td>
+                        <td>₹${student.pendingAmount}</td>
+                        <td><span class="badge ${statusClass}">${status}</span></td>
+                    </tr>
+                `;
+                tbody.innerHTML += row;
+            });
+        }
+
+        // Load attendance
+        async function loadAttendance() {
+            try {
+                const token = localStorage.getItem('token');
+                const response = await fetch(`${API_URL}/attendance`, {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                
+                if (response.ok) {
+                    const attendance = await response.json();
+                    renderAttendanceTable(attendance);
+                }
+            } catch (error) {
+                console.error('Error loading attendance:', error);
+            }
+        }
+
+        function renderAttendanceTable(attendance) {
+            const tbody = document.getElementById('attendanceTableBody');
+            tbody.innerHTML = '';
+            
+            attendance.forEach(record => {
+                const row = `
+                    <tr>
+                        <td>${new Date(record.date).toLocaleDateString()}</td>
+                        <td>${record.studentId.userId.name}</td>
+                        <td>${record.branch}</td>
+                        <td>${record.present ? '✅ Present' : '❌ Absent'}</td>
+                        <td>${record.markedBy?.name || 'System'}</td>
+                    </tr>
+                `;
+                tbody.innerHTML += row;
+            });
+        }
+
+        // Load payments
+        async function loadPayments() {
+            try {
+                const token = localStorage.getItem('token');
+                const response = await fetch(`${API_URL}/payments`, {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                
+                if (response.ok) {
+                    const payments = await response.json();
+                    renderPaymentsTable(payments);
+                }
+            } catch (error) {
+                console.error('Error loading payments:', error);
+            }
+        }
+
+        function renderPaymentsTable(payments) {
+            const tbody = document.getElementById('paymentsTableBody');
+            tbody.innerHTML = '';
+            
+            payments.forEach(payment => {
+                const row = `
+                    <tr>
+                        <td>${new Date(payment.paymentDate).toLocaleDateString()}</td>
+                        <td>${payment.studentId.userId.name}</td>
+                        <td>${payment.branch}</td>
+                        <td>${payment.classesCount}</td>
+                        <td>₹${payment.amount}</td>
+                        <td>${payment.paymentMethod}</td>
+                        <td>${payment.receivedBy?.name || 'System'}</td>
+                    </tr>
+                `;
+                tbody.innerHTML += row;
+            });
+        }
+
+        // Load mudras
+        async function loadMudras() {
+            try {
+                const response = await fetch(`${API_URL}/mudras`);
+                if (response.ok) {
+                    const mudras = await response.json();
+                    renderMudrasGrid(mudras);
+                }
+            } catch (error) {
+                console.error('Error loading mudras:', error);
+            }
+        }
+
+        function renderMudrasGrid(mudras) {
+            const grid = document.getElementById('mudrasGrid');
+            grid.innerHTML = '';
+            
+            mudras.forEach(mudra => {
+                const card = `
+                    <div class="card">
+                        <h3>${mudra.name}</h3>
+                        <p><strong>Category:</strong> ${mudra.category}</p>
+                        <p><strong>Description:</strong> ${mudra.description}</p>
+                        <p><strong>Meaning:</strong> ${mudra.meaning}</p>
+                        ${mudra.image ? `<img src="${mudra.image}" alt="${mudra.name}" style="max-width: 100%; border-radius: 8px; margin-top: 10px;">` : ''}
+                    </div>
+                `;
+                grid.innerHTML += card;
+            });
+        }
+
+        // Load theory
+        async function loadTheory() {
+            try {
+                const response = await fetch(`${API_URL}/theory`);
+                if (response.ok) {
+                    const theories = await response.json();
+                    renderTheoryGrid(theories);
+                }
+            } catch (error) {
+                console.error('Error loading theory:', error);
+            }
+        }
+
+        function renderTheoryGrid(theories) {
+            const grid = document.getElementById('theoryGrid');
+            grid.innerHTML = '';
+            
+            theories.forEach(theory => {
+                const card = `
+                    <div class="card">
+                        <div style="font-size: 24px; margin-bottom: 10px;">${theory.icon}</div>
+                        <h3>${theory.title}</h3>
+                        <p><strong>Category:</strong> ${theory.category}</p>
+                        <p><strong>Description:</strong> ${theory.description}</p>
+                        <div style="margin-top: 15px; padding: 10px; background: #f5f5f5; border-radius: 8px;">
+                            ${theory.content}
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += card;
+            });
+        }
+
+        // Load student mudras
+        async function loadStudentMudras() {
+            try {
+                const response = await fetch(`${API_URL}/mudras`);
+                if (response.ok) {
+                    const mudras = await response.json();
+                    renderStudentMudrasGrid(mudras);
+                }
+            } catch (error) {
+                console.error('Error loading mudras:', error);
+            }
+        }
+
+        function renderStudentMudrasGrid(mudras) {
+            const grid = document.getElementById('studentMudrasGrid');
+            grid.innerHTML = '';
+            
+            mudras.forEach(mudra => {
+                const card = `
+                    <div class="card">
+                        <h3>${mudra.name}</h3>
+                        <p><strong>Category:</strong> ${mudra.category}</p>
+                        <p><strong>Description:</strong> ${mudra.description}</p>
+                        <p><strong>Meaning:</strong> ${mudra.meaning}</p>
+                        ${mudra.image ? `<img src="${mudra.image}" alt="${mudra.name}" style="max-width: 100%; border-radius: 8px; margin-top: 10px;">` : ''}
+                    </div>
+                `;
+                grid.innerHTML += card;
+            });
+        }
+
+        // Load student theory
+        async function loadStudentTheory() {
+            try {
+                const response = await fetch(`${API_URL}/theory`);
+                if (response.ok) {
+                    const theories = await response.json();
+                    renderStudentTheoryGrid(theories);
+                }
+            } catch (error) {
+                console.error('Error loading theory:', error);
+            }
+        }
+
+        function renderStudentTheoryGrid(theories) {
+            const grid = document.getElementById('studentTheoryGrid');
+            grid.innerHTML = '';
+            
+            theories.forEach(theory => {
+                const card = `
+                    <div class="card">
+                        <div style="font-size: 24px; margin-bottom: 10px;">${theory.icon}</div>
+                        <h3>${theory.title}</h3>
+                        <p><strong>Category:</strong> ${theory.category}</p>
+                        <p><strong>Description:</strong> ${theory.description}</p>
+                        <div style="margin-top: 15px; padding: 10px; background: #f5f5f5; border-radius: 8px;">
+                            ${theory.content}
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += card;
+            });
+        }
+
+        // Load student dropdown
+        async function loadStudentDropdown(selectId) {
+            try {
+                const token = localStorage.getItem('token');
+                const response = await fetch(`${API_URL}/students`, {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                
+                if (response.ok) {
+                    const students = await response.json();
+                    const select = document.getElementById(selectId);
+                    select.innerHTML = '<option value="">Select Student</option>';
+                    
+                    students.forEach(student => {
+                        const option = document.createElement('option');
+                        option.value = student._id;
+                        option.textContent = student.userId.name;
+                        select.appendChild(option);
+                    });
+                }
+            } catch (error) {
+                console.error('Error loading students dropdown:', error);
+            }
+        }
+
+        // Update payment amount
+        function updatePaymentAmount() {
+            const studentId = document.getElementById('paymentStudent').value;
+            const classes = parseInt(document.getElementById('paymentClasses').value) || 0;
+            
+            if (studentId && classes > 0) {
+                const student = studentsData.find(s => s._id === studentId);
+                if (student) {
+                    const amount = classes * student.feePerClass;
+                    document.getElementById('paymentAmount').value = amount;
+                }
+            }
+        }
+
+        // Load student data for student dashboard
+        async function loadStudentData() {
+            try {
+                const token = localStorage.getItem('token');
+                const response = await fetch(`${API_URL}/students/me`, {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    const student = data.student;
+                    
+                    document.getElementById('studentClassesAttended').textContent = student.totalClassesAttended;
+                    document.getElementById('studentUnpaidClasses').textContent = student.unpaidClasses;
+                    document.getElementById('studentPendingAmount').textContent = `₹${student.pendingAmount}`;
+                    document.getElementById('studentTotalPaid').textContent = `₹${student.totalPaid}`;
+                    
+                    // Render attendance
+                    const attendanceBody = document.getElementById('studentAttendanceBody');
+                    attendanceBody.innerHTML = '';
+                    data.attendanceRecords.forEach(record => {
+                        const row = `
+                            <tr>
+                                <td>${new Date(record.date).toLocaleDateString()}</td>
+                                <td>${record.present ? '✅ Present' : '❌ Absent'}</td>
+                            </tr>
+                        `;
+                        attendanceBody.innerHTML += row;
+                    });
+                    
+                    // Render payments
+                    const paymentBody = document.getElementById('studentPaymentBody');
+                    paymentBody.innerHTML = '';
+                    data.paymentRecords.forEach(payment => {
+                        const row = `
+                            <tr>
+                                <td>${new Date(payment.paymentDate).toLocaleDateString()}</td>
+                                <td>${payment.classesCount}</td>
+                                <td>₹${payment.amount}</td>
+                                <td>${payment.paymentMethod}</td>
+                            </tr>
+                        `;
+                        paymentBody.innerHTML += row;
+                    });
+                }
+            } catch (error) {
+                console.error('Error loading student data:', error);
+            }
+        }
+
+        // Form handlers
+        async function handleAddStudent(e) {
+            e.preventDefault();
+            
+            const studentData = {
+                name: document.getElementById('studentName').value,
+                email: document.getElementById('studentEmail').value,
+                password: document.getElementById('studentPassword').value,
+                phone: document.getElementById('studentPhone').value,
+                branch: document.getElementById('studentBranch').value,
+                feePerClass: parseInt(document.getElementById('studentFee').value)
+            };
+            
+            console.log('Sending student data:', studentData);
+            
+            try {
+                const token = localStorage.getItem('token');
+                const response = await fetch(`${API_URL}/students`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify(studentData)
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    alert('✅ Student added successfully!');
+                    closeModal('addStudentModal');
+                    document.getElementById('addStudentForm').reset();
+                    loadStudents();
+                    loadDashboardStats();
+                } else {
+                    console.error('Server error:', result);
+                    alert('❌ Error adding student: ' + (result.error || 'Unknown error'));
+                }
+            } catch (error) {
+                console.error('Network error:', error);
+                alert('❌ Network error: ' + error.message);
+            }
+        }
+
+        async function handleMarkAttendance(e) {
+            e.preventDefault();
+            
+            const attendanceData = {
+                studentId: document.getElementById('attendanceStudent').value,
+                date: document.getElementById('attendanceDate').value,
+                present: document.getElementById('attendancePresent').checked
+            };
+            
+            try {
+                const token = localStorage.getItem('token');
+                const response = await fetch(`${API_URL}/attendance`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify(attendanceData)
+                });
+                
+                if (response.ok) {
+                    closeModal('markAttendanceModal');
+                    document.getElementById('markAttendanceForm').reset();
+                    loadAttendance();
+                    loadDashboardStats();
+                } else {
+                    const error = await response.json();
+                    alert('Error marking attendance: ' + error.error);
+                }
+            } catch (error) {
+                alert('Error marking attendance: ' + error.message);
+            }
+        }
+
+        async function handleRecordPayment(e) {
+            e.preventDefault();
+            
+            const paymentData = {
+                studentId: document.getElementById('paymentStudent').value,
+                classesCount: parseInt(document.getElementById('paymentClasses').value),
+                paymentMethod: document.getElementById('paymentMethod').value
+            };
+            
+            try {
+                const token = localStorage.getItem('token');
+                const response = await fetch(`${API_URL}/payments`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify(paymentData)
+                });
+                
+                if (response.ok) {
+                    closeModal('recordPaymentModal');
+                    document.getElementById('recordPaymentForm').reset();
+                    loadPayments();
+                    loadDashboardStats();
+                } else {
+                    const error = await response.json();
+                    alert('Error recording payment: ' + error.error);
+                }
+            } catch (error) {
+                alert('Error recording payment: ' + error.message);
+            }
+        }
+
+        async function handleAddMudra(e) {
             e.preventDefault();
             
             const mudraData = {
                 name: document.getElementById('mudraName').value,
                 category: document.getElementById('mudraCategory').value,
                 description: document.getElementById('mudraDescription').value,
-                // FIX: map 'usage' from frontend form to 'meaning' for the backend schema
-                meaning: document.getElementById('mudraUsage').value, 
-                // FIX: map 'imageUrl' from frontend form to 'image' for the backend schema
-                image: document.getElementById('mudraImageUrl').value 
+                meaning: document.getElementById('mudraMeaning').value,
+                image: document.getElementById('mudraImage').value
             };
-
+            
             try {
+                const token = localStorage.getItem('token');
                 const response = await fetch(`${API_URL}/mudras`, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
                     body: JSON.stringify(mudraData)
                 });
-
+                
                 if (response.ok) {
-                    alert('Mudra added successfully!');
                     closeModal('addMudraModal');
-                    loadMudras();
                     document.getElementById('addMudraForm').reset();
+                    loadMudras();
                 } else {
                     const error = await response.json();
-                    alert(`Error adding mudra: ${error.error || response.statusText}. Check server console.`);
+                    alert('Error adding mudra: ' + error.error);
                 }
             } catch (error) {
-                alert('Could not connect to server at http://localhost:5000/api. Ensure your Node server is running.');
+                alert('Error adding mudra: ' + error.message);
             }
-        });
+        }
 
-        // Initial load
-        loadMudras();
+        async function handleAddTheory(e) {
+            e.preventDefault();
+            
+            const theoryData = {
+                title: document.getElementById('theoryTitle').value,
+                category: document.getElementById('theoryCategory').value,
+                description: document.getElementById('theoryDescription').value,
+                content: document.getElementById('theoryContent').value,
+                icon: document.getElementById('theoryIcon').value
+            };
+            
+            try {
+                const token = localStorage.getItem('token');
+                const response = await fetch(`${API_URL}/theory`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify(theoryData)
+                });
+                
+                if (response.ok) {
+                    closeModal('addTheoryModal');
+                    document.getElementById('addTheoryForm').reset();
+                    loadTheory();
+                } else {
+                    const error = await response.json();
+                    alert('Error adding theory: ' + error.error);
+                }
+            } catch (error) {
+                alert('Error adding theory: ' + error.message);
+            }
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let modal of modals) {
+                if (event.target === modal) {
+                    modal.classList.remove('active');
+                }
+            }
+        }
     </script>
 </body>
 </html>
